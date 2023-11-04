@@ -4,9 +4,49 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
 -->
 
-<xs:schema version="1.0"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xsi:schema version="1.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
-    
 
-</xs:schema>
+<xsi:element name="profil" type="Profil"/>
+
+<xsi:complexType name="Profil">
+    <xsi:sequence>
+        <xsi:element name="nom" type="xsi:string" />
+        <xsi:element name="avatar" type="xsi:string"/>
+        <xsi:element name="anniversaire" type="xsi:date"/>
+        <xsi:element name="parties" type="Parties"/>
+    </xsi:sequence>
+</xsi:complexType>
+   
+<xsi:complexType name="Parties">
+    <xsi:sequence><xsi:element name="partie" type="Partie" maxOccurs="unbounded"/></xsi:sequence>
+</xsi:complexType>
+
+<xsi:complexType name="Partie">
+    <xsi:sequence>
+        <xsi:element name="temps" type="Temps" minOccurs="0" maxOccurs="1" />
+        <xsi:element name="mot" type="Mot"/>
+    </xsi:sequence>
+    <xsi:attribute name="date" type="xsi:date"/>
+    <xsi:attribute name="trouvé"  minOccurs="0" maxOccurs="1"/>
+</xsi:complexType>
+
+<xsi:simpleType name="Temps">
+    <xsi:restriction base="xsi:double">
+       <xsi:minInclusive value="0"/>
+       <xsi:maxInclusive value="59" />
+    </xsi:restriction>
+</xsi:simpleType>
+
+<xsi:complexType name="Mot">
+    <xsi:attribute  name="niveau" type="Niveau"/>
+</xsi:complexType>
+
+<xsi:simpleType name="Niveau">
+    <xsi:restriction base="xsi:double">
+        <xsi:minExclusive value="0"/>
+        <xsi:maxExclusive value="6"/>
+    </xsi:restriction>
+</xsi:simpleType>
+</xsi:schema>
