@@ -6,13 +6,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
 
 <xs:schema version="1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ujf-grenoble/dictionnaire"
+           xmlns="http://ujf-grenoble/dictionnaire"
            elementFormDefault="qualified">
     
-    <xs:element name="monDico" type="Dictionnaire"/>
+    <xs:element name="dictionnaire" type="Dictionnaire"/>
     
     <xs:complexType name="Dictionnaire">
         <xs:sequence> 
-            <xs:element name="mot" type="Mot" maxOccurs="unbounded"/>
+            <xs:element name="mot" type="Mot" minOccurs="1"  maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     
@@ -20,14 +22,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
     <xs:simpleType name="TypeLettre">
     <xs:restriction base="xs:string">
       <xs:pattern value="\p{L}+"/>
-      <xs:minLength value="3"/>
+      <xs:minLength value="1"/>
     </xs:restriction>
   </xs:simpleType>
  
  <!-- Definiton du type de Niveau-->
   <xs:simpleType name="Niveau">
       <xs:restriction base=" xs:int">
-          <xs:maxInclusive value="1"/>
+          <xs:minInclusive value="1"/>
           <xs:maxInclusive value="5"/>
       </xs:restriction>
   </xs:simpleType>
@@ -40,7 +42,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
             <xs:element name="deuxiemeLettre" type="TypeLettre"/>
             <xs:element name="troisiemeLettre" type="TypeLettre"/>
         </xs:sequence>
-        <xs:attribute name="niveau" type="Niveau"/>
+        <xs:attribute name="niveau" type="Niveau" use="required"/>
     </xs:complexType>
     
 </xs:schema>

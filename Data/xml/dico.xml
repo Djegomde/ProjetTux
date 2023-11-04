@@ -6,48 +6,52 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
 
 
 
-<dictionnaire>
+<dictionnaire  xmlns="http://ujf-grenoble/dictionnaire"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://ujf-grenoble/dictionnaire ../xsd/dico.xsd"
+                
+>
     
     <!-- Premier mot avec le niveau 1-->
     <mot niveau="1">
-        <premierLettre></premierLettre>
+        <premiereLettre>A</premiereLettre>
         
-        <deuxiemeLettre></deuxiemeLettre>
+        <deuxiemeLettre>m</deuxiemeLettre>
         
-        <troisiemeLettre></troisiemeLettre>
+        <troisiemeLettre>e</troisiemeLettre>
     </mot>
      <!-- Deuxieme mot avec le niveau 2-->
     <mot niveau="2">
-        <premierLettre></premierLettre>
+        <premiereLettre>jejr</premiereLettre>
         
-        <deuxiemeLettre></deuxiemeLettre>
+        <deuxiemeLettre>é</deuxiemeLettre>
         
-        <troisiemeLettre></troisiemeLettre>
+        <troisiemeLettre>vréàç</troisiemeLettre>
         
     </mot>
      <!-- Troisième mot avec le niveau 3-->
     <mot niveau="3">
-        <premierLettre></premierLettre>
+        <premiereLettre>a</premiereLettre>
         
-        <deuxiemeLettre></deuxiemeLettre>
+        <deuxiemeLettre>r</deuxiemeLettre>
         
-        <troisiemeLettre></troisiemeLettre>
+        <troisiemeLettre>e</troisiemeLettre>
     </mot>
     
      <!-- Quatrième  mot avec le niveau 4-->
     <mot niveau="4">
-        <premierLettre></premierLettre>
+        <premiereLettre>ré</premiereLettre>
         
-        <deuxiemeLettre></deuxiemeLettre>
+        <deuxiemeLettre>f</deuxiemeLettre>
         
-        <troisiemeLettre></troisiemeLettre>
+        <troisiemeLettre>g</troisiemeLettre>
     </mot>
      <!-- Cinquime  mot avec le niveau 5-->
     <mot niveau="5">
-        <premierLettre></premierLettre>
+        <premiereLettre>y</premiereLettre>
         
-        <deuxiemeLettre></deuxiemeLettre>
+        <deuxiemeLettre>r</deuxiemeLettre>
         
-        <troisiemeLettre></troisiemeLettre>
+        <troisiemeLettre>c</troisiemeLettre>
     </mot>
 </dictionnaire>

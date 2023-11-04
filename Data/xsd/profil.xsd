@@ -28,8 +28,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
         <xsi:element name="temps" type="Temps" minOccurs="0" maxOccurs="1" />
         <xsi:element name="mot" type="Mot"/>
     </xsi:sequence>
-    <xsi:attribute name="date" type="xsi:date"/>
-    <xsi:attribute name="trouvé"  minOccurs="0" maxOccurs="1"/>
+    <xsi:attribute name="date" type="xsi:date" use="required"/>
+    <xsi:attribute name="trouvé" use="optional" />
 </xsi:complexType>
 
 <xsi:simpleType name="Temps">
@@ -49,4 +49,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
         <xsi:maxExclusive value="6"/>
     </xsi:restriction>
 </xsi:simpleType>
+
 </xsi:schema>
