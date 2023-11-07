@@ -13,8 +13,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
     <ns1:mot niveau="1">Avion</ns1:mot>
     <ns1:mot niveau="1">Ali</ns1:mot>
     <ns1:mot niveau="1">Ail</ns1:mot>
+    <ns1:mot niveau="2">BonBon</ns1:mot>
+    <ns1:mot niveau="3">Carière</ns1:mot>
+    <ns1:mot niveau="2">Car</ns1:mot>
+    <ns1:mot niveau="5">Ziguégué</ns1:mot>
     <ns1:mot niveau="1">Bon</ns1:mot>
-    <ns1:mot niveau="2">Armé</ns1:mot>
-    <ns1:mot niveau="4">Zigzag</ns1:mot>
+    <ns1:mot niveau="1">Bien</ns1:mot>
+    <ns1:mot niveau="1">Bel</ns1:mot>
+    <ns1:mot niveau="5">ZigZag</ns1:mot>
 </ns1:dictionnaire>
 
