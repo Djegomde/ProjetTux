@@ -28,14 +28,17 @@
             <body>
                 <h1>DICTIONNAIRE TUX</h1>
                 <ol>
-                    <xsl:apply-templates select="tux:dictionnaire/tux:mot"/>
+                    <xsl:apply-templates select="//tux:mot">
+                         <xsl:sort  select="text()" order="ascending"/> 
+                        <br/>
+                    </xsl:apply-templates>
+                   
                 </ol>
             </body>
         </html>
     </xsl:template>
     
     <xsl:template match="tux:mot" >
-        
             <li> <xsl:value-of  select="text()"/></li>
     </xsl:template>
 
