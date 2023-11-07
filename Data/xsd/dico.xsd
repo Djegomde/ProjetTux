@@ -4,45 +4,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
 -->
 
-<xs:schema version="1.0"
+<xs:schema 
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://ujf-grenoble/dictionnaire"
-           xmlns="http://ujf-grenoble/dictionnaire"
+           targetNamespace="http://myGame/tux"
+           xmlns:tux="http://myGame/tux"
            elementFormDefault="qualified">
     
-    <xs:element name="dictionnaire" type="Dictionnaire"/>
+    <xs:element name="dictionnaire" type="tux:Dictionnaire"/>
     
     <xs:complexType name="Dictionnaire">
         <xs:sequence> 
-            <xs:element name="mot" type="Mot" minOccurs="1"  maxOccurs="unbounded"/>
+            <xs:element name="mot" type="tux:MotEtendu" minOccurs="1"  maxOccurs="unbounded"  />
         </xs:sequence>
     </xs:complexType>
     
     <!-- Definition du type des lettres-->
-    <xs:simpleType name="TypeLettre">
+    <xs:simpleType name="Mot">
     <xs:restriction base="xs:string">
       <xs:pattern value="\p{L}+"/>
       <xs:minLength value="1"/>
     </xs:restriction>
   </xs:simpleType>
  
- <!-- Definiton du type de Niveau-->
+  <xs:complexType name="MotEtendu">
+      <xs:simpleContent>
+          <xs:extension base="tux:Mot">
+              <xs:attribute name="niveau" type="tux:Niveau"></xs:attribute>
+          </xs:extension>
+      </xs:simpleContent>
+  </xs:complexType>
+  
   <xs:simpleType name="Niveau">
-      <xs:restriction base=" xs:int">
+      <xs:restriction base="xs:int">
           <xs:minInclusive value="1"/>
           <xs:maxInclusive value="5"/>
       </xs:restriction>
   </xs:simpleType>
-  
-  
-    <!-- Definition du type complex mot-->
-    <xs:complexType name="Mot">
-        <xs:sequence>
-            <xs:element name="premiereLettre" type="TypeLettre"/>
-            <xs:element name="deuxiemeLettre" type="TypeLettre"/>
-            <xs:element name="troisiemeLettre" type="TypeLettre"/>
-        </xs:sequence>
-        <xs:attribute name="niveau" type="Niveau" use="required"/>
-    </xs:complexType>
-    
 </xs:schema>

@@ -4,7 +4,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
 -->
 
-<profil xmlns="http://myGame/tux" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://myGame/tux ./profil.xsd">
+<profil   xmlns="http://myGame/tux" 
+          xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xs:schemaLocation="http://myGame/tux ../xsd/profil.xsd">
     
 <nom>Alban</nom>
 <avatar>conan.jpg</avatar>
@@ -25,5 +27,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <mot niveau="2">indice</mot>
         </partie>
 
-    </parties>
+        <partie date="2023-12-11">
+            <temps>40.0</temps>
+            <mot niveau="4">Zigzag</mot>
+            </partie>
+         </parties>
 </profil>

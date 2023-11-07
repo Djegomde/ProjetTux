@@ -6,52 +6,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
 
 
 
-<dictionnaire  xmlns="http://ujf-grenoble/dictionnaire"
-               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="http://ujf-grenoble/dictionnaire ../xsd/dico.xsd"
-                
->
-    
-    <!-- Premier mot avec le niveau 1-->
-    <mot niveau="1">
-        <premiereLettre>A</premiereLettre>
-        
-        <deuxiemeLettre>m</deuxiemeLettre>
-        
-        <troisiemeLettre>e</troisiemeLettre>
-    </mot>
-     <!-- Deuxieme mot avec le niveau 2-->
-    <mot niveau="2">
-        <premiereLettre>jejr</premiereLettre>
-        
-        <deuxiemeLettre>é</deuxiemeLettre>
-        
-        <troisiemeLettre>vréàç</troisiemeLettre>
-        
-    </mot>
-     <!-- Troisième mot avec le niveau 3-->
-    <mot niveau="3">
-        <premiereLettre>a</premiereLettre>
-        
-        <deuxiemeLettre>r</deuxiemeLettre>
-        
-        <troisiemeLettre>e</troisiemeLettre>
-    </mot>
-    
-     <!-- Quatrième  mot avec le niveau 4-->
-    <mot niveau="4">
-        <premiereLettre>ré</premiereLettre>
-        
-        <deuxiemeLettre>f</deuxiemeLettre>
-        
-        <troisiemeLettre>g</troisiemeLettre>
-    </mot>
-     <!-- Cinquime  mot avec le niveau 5-->
-    <mot niveau="5">
-        <premiereLettre>y</premiereLettre>
-        
-        <deuxiemeLettre>r</deuxiemeLettre>
-        
-        <troisiemeLettre>c</troisiemeLettre>
-    </mot>
-</dictionnaire>
+<ns1:dictionnaire
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://myGame/tux'
+    xsi:schemaLocation='http://myGame/tux ../xsd/dico.xsd'>
+    <ns1:mot niveau="1">Avion</ns1:mot>
+    <ns1:mot niveau="1">Ali</ns1:mot>
+    <ns1:mot niveau="1">Ail</ns1:mot>
+    <ns1:mot niveau="1">Bon</ns1:mot>
+    <ns1:mot niveau="2">Armé</ns1:mot>
+    <ns1:mot niveau="4">Zigzag</ns1:mot>
+</ns1:dictionnaire>
+
